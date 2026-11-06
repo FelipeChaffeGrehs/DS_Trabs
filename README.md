@@ -239,9 +239,3 @@ DS_Trabs/
 - **Swing** para a interface gráfica
 - **[JFugue 5.0.9](http://www.jfugue.org/)** para tocar e exportar música (MIDI)
 - **Git / GitHub** para versionamento
-
-## 👥 Autores
-
-- **Felipe Grehs**
-- **Guilherme Gamarra**
-- **Lucas Fuchs**

@@ -126,7 +126,7 @@ Clique em **Exportar MIDI**, escolha o nome e a pasta. O arquivo `.mid` é gerad
 
 ### Visão geral
 
-O texto passa por um "pipeline" de tradução. Cada linha do texto é uma voz, e cada voz é dividida em pedaços. Para cada pedaço é procurada a primeira regra que sabe tratá-lo através da biblioteca regex (reconhecimento de padrões no texto de entrada). Cada regra da nossa aplicação implementa uma interface `analisaChar`, que reconhece o padrão e executa o mapeamento.Outro elemento fundamental do nosso projeto é o `ParametrosAtuais`, que guarda o estado de cada voz enquanto o texto é lido, tais como oitava, volume, instrumento, BPM e a última nota tocada. Com isso. é possível realizar as conversões de texto para a formatação reconhecida pelo JFugue.
+O texto passa por um "pipeline" de tradução. Cada linha do texto é uma voz, e cada voz é dividida em pedaços. Através da biblioteca regex (reconhecimento de padrões no texto de entrada), para cada pedaço é interpretado e extraído um trecho a ser processado. Todas as regras de tradução da nossa aplicação implementam uma interface `analisaChar`, que reconhece o padrão e executa o mapeamento. Outro elemento fundamental do funcionamento é o `ParametrosAtuais`, que guarda o estado de cada voz enquanto o texto é lido, tais como oitava, volume, instrumento, BPM e a última nota tocada. Com isso. é possível realizar as conversões de texto para a formatação reconhecida pelo JFugue.
 
 ### Tabela de mapeamento
 

@@ -14,7 +14,6 @@ Programa em Java que transforma um texto comum em música. Cada caractere digita
 
 A concepção do programa se deu por traduzir uma linguagem pré-determinada (fases 1 e 2 do trabalho) em música. O usuário é capaz de digitar (ou abrir um arquivo `.txt`) uma sequência de letras, símbolos e números, e o programa traduz cada um deles, seguindo regras de mapeamento, para a sintaxe de música da biblioteca [JFugue](http://www.jfugue.org/), que então toca o resultado.
 
-Por exemplo, `C:3D:3E:3F:3G:1` toca as notas Dó, Ré, Mi, Fá e Sol, e `C;C` toca um Dó, troca de instrumento e toca outro Dó.
 
 ### Funcionalidades
 

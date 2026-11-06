@@ -4,22 +4,22 @@ import musica.ContextoChar;
 import musica.FormatacaoJF;
 import musica.ParametrosAtuais;
 
-public class TrocaInstrumento implements analisaChar {
+public class TrocaInstrumento implements AnalisaChar {
 
     private static final int BANDONEON = 24;
     private static final int AGOGO = 114;
     private static final int TUBULAR_BELLS = 15;
     private static final int TOTAL_INSTRUMENTOS = 128;
 
-    //Polimorfismo da TesteChar, verifica se é algum dos caracteres em abcdefg
+    //Polimorfismo da testeChar, verifica se é algum dos caracteres em !,;0123456789
     @Override
-    public boolean TesteChar(char c) {
+    public boolean testeChar(char c) {
         return "!,;0123456789".indexOf(c) >= 0;
     }
 
-    //Polimorfismo da TraducaoTexto, executa o comando de cada regra
+    //Polimorfismo da traducaoTexto, executa o comando de cada regra
     @Override
-    public String TraducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
+    public String traducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
         int novo = switch (contexto.atual) {
             case '!' -> BANDONEON;
             case ',' -> AGOGO;
@@ -33,6 +33,6 @@ public class TrocaInstrumento implements analisaChar {
         novo = (novo - 1) % TOTAL_INSTRUMENTOS + 1;
         pAtual.setNumInstrumento(novo);
         pAtual.setAnteriorEhNota(false);
-        return FormatacaoJF.MudaInstrumento(novo);
+        return FormatacaoJF.mudaInstrumento(novo);
     }
 }

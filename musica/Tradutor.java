@@ -1,16 +1,16 @@
 package musica;
 
-import regras.analisaChar;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import regras.AnalisaChar;
 
 public class Tradutor {
 
-    private final List<analisaChar> regras;
+    private final List<AnalisaChar> regras;
 
     //Construtor da classe, recebe uma lista de regras de mapeamento
-    public Tradutor(List<analisaChar> regras) {
+    public Tradutor(List<AnalisaChar> regras) {
         this.regras = regras;
     }
 
@@ -82,9 +82,9 @@ public class Tradutor {
         for (String pedaco : Selecionador.separar(linha)) {
             ContextoChar contexto = new ContextoChar(pedaco);
             //Pega a lista de regras passadas no construtor e ve qual é a regra de cada pedaco
-            for (analisaChar regra : regras) {
-                if (regra.TesteChar(contexto.atual)) {
-                    voz.append(regra.TraducaoTexto(contexto, parametros));
+            for (AnalisaChar regra : regras) {
+                if (regra.testeChar(contexto.atual)) {
+                    voz.append(regra.traducaoTexto(contexto, parametros));
                     break;
                 }
             }

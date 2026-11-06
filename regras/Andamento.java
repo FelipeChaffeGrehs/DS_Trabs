@@ -3,21 +3,21 @@ package regras;
 import musica.ContextoChar;
 import musica.ParametrosAtuais;
 
-public class Andamento implements analisaChar {
+public class Andamento implements AnalisaChar {
 
     private static final int VARIACAO = 10;
     private static final int BPM_MINIMO = 20;
     private static final int BPM_MAXIMO = 300;
 
-    //Polimorfismo da TesteChar, verifica se é algum dos caracteres
+    //Polimorfismo da testeChar, verifica se é algum dos caracteres
     @Override
-    public boolean TesteChar(char c) {
+    public boolean testeChar(char c) {
         return c == '>' || c == '<';
     }
 
-    //Polimorfismo da TraducaoTexto, executa o comando de cada regra
+    //Polimorfismo da traducaoTexto, executa o comando de cada regra
     @Override
-    public String TraducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
+    public String traducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
         int variacao = (contexto.atual == '>') ? VARIACAO : -VARIACAO;
         //Calcula o novo bpm e garante nao ser maior que o maximo e menor que o minimo
         int novo = Math.max(BPM_MINIMO,

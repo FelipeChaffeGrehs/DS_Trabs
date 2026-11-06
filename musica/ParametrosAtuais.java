@@ -2,12 +2,12 @@ package musica;
 
 public class ParametrosAtuais {
 
-    private boolean AnteriorEhNota = false;
+    private boolean anteriorEhNota = false;
     private int volume = 64;
     private String ultimaNota = null;
-    private int NumInstrumento;
-    private char UltimaDuracao;
-    private int BPM;
+    private int numInstrumento;
+    private char ultimaDuracao;
+    private int bpm;
     public static final int OITAVA_MINIMA = 0;
     public static final int OITAVA_MAXIMA = 9;
 
@@ -50,34 +50,34 @@ public class ParametrosAtuais {
     }
 
     public boolean isAnteriorEhNota() {
-        return AnteriorEhNota;
+        return anteriorEhNota;
     }
 
     public void setAnteriorEhNota(boolean valor) {
-        this.AnteriorEhNota = valor;
+        this.anteriorEhNota = valor;
     }
 
-    public void setNumInstrumento(int NumInstrumento) {
-        this.NumInstrumento = NumInstrumento;
+    public void setNumInstrumento(int numInstrumento) {
+        this.numInstrumento = numInstrumento;
     }
 
     public int getNumInstrumento() {
-        return NumInstrumento;
+        return numInstrumento;
     }
 
     public char getUltimaDuracao() {
-        return UltimaDuracao;
+        return ultimaDuracao;
     }
 
-    public void setUltimaDuracao(char UltimaDuracao) {
-        this.UltimaDuracao = UltimaDuracao;
+    public void setUltimaDuracao(char ultimaDuracao) {
+        this.ultimaDuracao = ultimaDuracao;
     }
 
-    public void setBPM(int BPM) {
-        this.BPM = BPM;
+    public void setBPM(int bpm) {
+        this.bpm = bpm;
     }
 
     public int getBPM() {
-        return BPM;
+        return bpm;
     }
 }

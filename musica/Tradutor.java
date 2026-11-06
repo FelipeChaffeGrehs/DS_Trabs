@@ -52,7 +52,6 @@ public class Tradutor {
             musica.append(traduzirLinha(linhas[i], parametros));
             bpmAtual = parametros.getBPM();
         }
-        System.out.println(musica);
         return musica.toString().trim();
     }
 

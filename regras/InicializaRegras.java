@@ -5,8 +5,8 @@ import java.util.List;
 
 public class InicializaRegras {
     //Inicializa a lista de regras que serao passadas como parametro para o tradutor
-    public static List<analisaChar> criarRegras() {
-        List<analisaChar> regras = new ArrayList<>();
+    public static List<AnalisaChar> criarRegras() {
+        List<AnalisaChar> regras = new ArrayList<>();
         regras.add(new Nota());
         regras.add(new Silencio());
         regras.add(new TrocaInstrumento());

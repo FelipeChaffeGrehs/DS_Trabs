@@ -3,17 +3,17 @@ package regras;
 import musica.ContextoChar;
 import musica.ParametrosAtuais;
 
-public class Volume implements analisaChar {
+public class Volume implements AnalisaChar {
 
-    //Polimorfismo da TesteChar, verifica se é espaco
+    //Polimorfismo da testeChar, verifica se é espaco
     @Override
-    public boolean TesteChar(char c) {
+    public boolean testeChar(char c) {
         return c == ' ';
     }
 
-    //Polimorfismo da TraducaoTexto, executa o comando de cada regra
+    //Polimorfismo da traducaoTexto, executa o comando de cada regra
     @Override
-    public String TraducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
+    public String traducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
         //Se for espaco, dobra o volume ou define como maximo (127)
         pAtual.setVolume(Math.min(pAtual.getVolume() * 2, 127));
         pAtual.setAnteriorEhNota(false);

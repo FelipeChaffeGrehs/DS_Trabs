@@ -5,17 +5,17 @@ import musica.Duracao;
 import musica.FormatacaoJF;
 import musica.ParametrosAtuais;
 
-public class Nota implements analisaChar {
+public class Nota implements AnalisaChar {
 
-    //Polimorfismo da TesteChar, verifica se é algum dos caracteres
+    //Polimorfismo da testeChar, verifica se é algum dos caracteres
     @Override
-    public boolean TesteChar(char c) {
+    public boolean testeChar(char c) {
         return ("ABCDEFG".indexOf(c) >= 0);
     }
 
-    //Polimorfismo da TraducaoTexto, executa o comando de cada regra
+    //Polimorfismo da traducaoTexto, executa o comando de cada regra
     @Override
-    public String TraducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
+    public String traducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual) {
         String nota = Duracao.tirarDuracao(contexto.pedaco); //Se tiver ':', tira
         char duracao = Duracao.letraDeDuracao(contexto.pedaco);//Se tiver ':' obtem a duracao musical
 

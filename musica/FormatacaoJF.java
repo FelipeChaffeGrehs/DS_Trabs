@@ -10,7 +10,7 @@ public class FormatacaoJF {
         return "Rq ";
     }
 
-    public static String MudaInstrumento(int novo) {
+    public static String mudaInstrumento(int novo) {
         return "I" + (novo - 1) + " ";
     }
 }

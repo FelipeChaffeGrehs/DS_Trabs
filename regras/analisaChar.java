@@ -4,7 +4,7 @@ import musica.ContextoChar;
 import musica.ParametrosAtuais;
 
 //Interface que sera como um esqueleto para cada regra
-public interface analisaChar {
-    boolean TesteChar(char c);
-    String TraducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual);
+public interface AnalisaChar {
+    boolean testeChar(char c);
+    String traducaoTexto(ContextoChar contexto, ParametrosAtuais pAtual);
 }

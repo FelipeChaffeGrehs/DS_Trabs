@@ -174,22 +174,6 @@ Cada **linha** é uma voz diferente, tocada ao mesmo tempo. São permitidas **at
 | 4ª linha | escolhida − 3 | escolhido − 60 | Fagote (nº 71) |
 
 Os valores nunca ficam abaixo de 0. Cada voz pode trocar de instrumento, oitava e volume por conta própria durante a música.
-
-### Exemplos de tradução
-
-Com os valores padrão (BPM 120, volume 100, oitava 6, Piano Acústico):
-
-| Texto | Saída JFugue | O que acontece |
-|---|---|---|
-| `C#:2Bb` | `T120 V0 I0 C#6ha100 Bb6qa100` | Dó sustenido de 2 tempos (mínima) e Si bemol de semínima |
-| `C@@` | `T120 V0 I0 C6qa100 C6qa100 Rq` | O 1º `@` repete a nota, o 2º `@` vira pausa |
-| `CDE>F` | `T120 V0 I0 C6qa100 D6qa100 E6qa100 T130 F6qa100` | O `>` acelera de 120 para 130 BPM |
-| `[2]C` | `T120 V0 I0 Rq Rq C6qa100` | Duas pausas de atraso e depois a nota |
-| `C;C` | `T120 V0 I0 C6qa100 I14 C6qa100` | O `;` troca para Tubular Bells |
-| `C` + nova linha + `E` | `T120 V0 I0 C6qa100 V1 I19 E5qa80` | A 2ª linha vira a voz 1, com Órgão, uma oitava abaixo e volume 80 |
-
-Como ler a saída: `T120` é o tempo (BPM), `V0` é a voz, `I0` é o instrumento (numeração do JFugue começa em 0, então `I0` é o instrumento nº 1), `C6qa100` é a nota Dó na oitava 6, duração `q` e intensidade 100, e `Rq` é uma pausa de semínima.
-
 ---
 
 ##  Organização do código

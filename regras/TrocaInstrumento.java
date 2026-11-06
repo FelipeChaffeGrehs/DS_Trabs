@@ -11,7 +11,7 @@ public class TrocaInstrumento implements AnalisaChar {
     private static final int TUBULAR_BELLS = 15;
     private static final int TOTAL_INSTRUMENTOS = 128;
 
-    //Polimorfismo da testeChar, verifica se é algum dos caracteres em !,;0123456789
+    //Polimorfismo da testeChar, verifica se é um dos caracteres que trocam de instrumento
     @Override
     public boolean testeChar(char c) {
         return "!,;0123456789".indexOf(c) >= 0;
